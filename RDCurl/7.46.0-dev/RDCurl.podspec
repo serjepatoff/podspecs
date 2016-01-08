@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.homepage     = "http://www.curl.haxx.se"
   s.license      = "MIT License"
   s.author       = { "Daniel Stenberg" => "daniel@haxx.se" }
-  s.source       = { :git => "https://github.com/serjepatoff/curl", :commit => "58aedacb0c70d115447587676808841ba9d2f483" }
+  s.source       = { :git => "https://github.com/serjepatoff/curl", :commit => "3548096ea232e939d4c7dc249cfd0ea97cee9ac2" }
 
   s.platform     = :ios, "8.0"
   s.default_subspec = "common"
