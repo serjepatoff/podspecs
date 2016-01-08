@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.author       = { "Daniel Stenberg" => "daniel@haxx.se" }
   s.source       = { :git => "https://github.com/serjepatoff/curl", :commit => "071ea4ffc419097edc6dee01c4ef3d3de028be9e" }
 
-  s.platform     = :ios, "8.0"
+  s.platform     = :ios
   s.default_subspec = "common"
   s.requires_arc = false
   
