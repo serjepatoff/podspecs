@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.requires_arc = false
   
   s.subspec 'common' do |common|
-    common.source_files = "lib/*.{h,c}", "lib/vtls/*.{h,c}", "include/curl/*.{h}", "include/*.{h}"
+    common.source_files = "lib/**.{h,c}"
     common.public_header_files = 'include/**.{h}'
     common.header_mappings_dir = 'include'
 
