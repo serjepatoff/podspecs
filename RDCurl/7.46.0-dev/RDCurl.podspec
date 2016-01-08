@@ -13,5 +13,5 @@ Pod::Spec.new do |s|
  
   s.source_files = "lib/**/*.{h,c}", "include/**/*.{h}"
   s.public_header_files = 'include/**/*.{h}'
-  s.common.header_mappings_dir = 'include'
+  s.header_mappings_dir = 'include'
 end
