@@ -10,6 +10,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "8.0"
   s.requires_arc = false
  
+  s.xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => 'BUILDING_LIBCURL CURL_STATICLIB HAVE_CONFIG_H'}
   s.source_files = "lib/**/*.{h,c}", "include/**/*.{h}"
   s.public_header_files = 'include/**/*.{h}'
   s.header_mappings_dir = 'include'
