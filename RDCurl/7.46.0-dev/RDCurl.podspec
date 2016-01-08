@@ -5,18 +5,14 @@ Pod::Spec.new do |s|
   s.homepage     = "http://www.curl.haxx.se"
   s.license      = "MIT License"
   s.author       = { "Daniel Stenberg" => "daniel@haxx.se" }
-  s.source       = { :git => "https://github.com/serjepatoff/curl", :commit => "071ea4ffc419097edc6dee01c4ef3d3de028be9e" }
+  s.source       = { :git => "https://github.com/serjepatoff/curl", :commit => "58aedacb0c70d115447587676808841ba9d2f483" }
 
   s.platform     = :ios, "8.0"
   s.default_subspec = "common"
   s.requires_arc = false
   
   s.subspec 'common' do |common|
-    common.prepare_command = <<-CMD
-      cp -R projects/iOS/libcurlStaticLib/gen-include/* include/
-    CMD
-    
-    common.source_files = "lib/*.{h,c}", "lib/vtls/*.{h,c}", "include/curl/*.{h}", "projects/iOS/libcurlStaticLib/gen-include/**/*.{h}"
+    common.source_files = "lib/*.{h,c}", "lib/vtls/*.{h,c}", "include/curl/*.{h}", "include/*.{h}"
     common.public_header_files = 'include/**.{h}'
     common.header_mappings_dir = 'include'
 
