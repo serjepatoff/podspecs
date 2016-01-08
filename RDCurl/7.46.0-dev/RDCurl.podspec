@@ -12,7 +12,10 @@ Pod::Spec.new do |s|
   s.requires_arc = false
   
   s.subspec 'common' do |common|
-    common.prepare_command = 'cp -R projects/iOS/libcurlStaticLib/gen-include/* include/'
+    common.prepare_command = <<-CMD
+      cp -R projects/iOS/libcurlStaticLib/gen-include/* include/
+    CMD
+    
     common.source_files = "lib/*.{h,c}", "lib/vtls/*.{h,c}", "include/curl/*.{h}", "projects/iOS/libcurlStaticLib/gen-include/**/*.{h}"
     common.public_header_files = 'include/**.{h}'
     common.header_mappings_dir = 'include'
