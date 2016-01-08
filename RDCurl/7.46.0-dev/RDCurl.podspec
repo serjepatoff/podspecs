@@ -10,11 +10,8 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "8.0"
   s.default_subspec = "common"
   s.requires_arc = false
-  
-  s.subspec 'common' do |common|
-    common.source_files = "lib/**/*.{h,c}", "include/**/*.{h}"
-    common.public_header_files = 'include/**/*.{h}'
-    common.header_mappings_dir = 'include'
-  end
-
+ 
+  s.source_files = "lib/**/*.{h,c}", "include/**/*.{h}"
+  s.public_header_files = 'include/**/*.{h}'
+  s.common.header_mappings_dir = 'include'
 end
