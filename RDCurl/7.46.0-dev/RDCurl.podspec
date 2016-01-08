@@ -14,5 +14,6 @@ Pod::Spec.new do |s|
   s.subspec 'common' do |common|
     common.source_files = "lib/*.{h,c}", "lib/vtls/*.{h,c}", "include/curl/*.{h}", "projects/iOS/libcurlStaticLib/gen-include/**/*.{h}"
     common.public_header_files = 'include/**.{h}'
+    common.header_mappings_dir = 'curl'
   end
 end
