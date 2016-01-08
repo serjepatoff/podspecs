@@ -12,14 +12,9 @@ Pod::Spec.new do |s|
   s.requires_arc = false
   
   s.subspec 'common' do |common|
-    common.source_files = "lib/**/*.{h,c}"
+    common.source_files = "lib/**/*.{h,c}", "include/**/*.{h}"
     common.public_header_files = 'include/**/*.{h}'
     common.header_mappings_dir = 'include'
-
-    common.xcconfig = {
-      'USER_HEADER_SEARCH_PATHS' => '${PODS_ROOT}/#{s.name}/projects/iOS/libcurlStaticLib/gen-include/curl'
-    }
-
   end
 
 end
