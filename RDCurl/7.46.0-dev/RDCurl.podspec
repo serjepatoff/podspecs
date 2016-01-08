@@ -12,6 +12,7 @@ Pod::Spec.new do |s|
   s.requires_arc = false
   
   s.subspec 'common' do |common|
+    common.platform = :ios, "8.0"
     common.source_files = "lib/*.{h,c}", "lib/vtls/*.{h,c}", "include/curl/*.{h}", "projects/iOS/libcurlStaticLib/gen-include/**.{h}"
     common.public_header_files = 'include/**.{h}'
   end
