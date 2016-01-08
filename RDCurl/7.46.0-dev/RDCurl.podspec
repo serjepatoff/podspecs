@@ -8,7 +8,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/serjepatoff/curl", :commit => "3548096ea232e939d4c7dc249cfd0ea97cee9ac2" }
 
   s.platform     = :ios, "8.0"
-  s.default_subspec = "common"
   s.requires_arc = false
  
   s.source_files = "lib/**/*.{h,c}", "include/**/*.{h}"
